@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './styles';
+import VideoJS from 'react-videojs';
 
 class Video extends React.Component {
   render() {
@@ -11,9 +12,9 @@ class Video extends React.Component {
 
     return (
       <div className="AdaptiveMedia" style={styles.AdaptiveMedia}>
-        <video src={videoSrc} controls={!gif} autoPlay={gif} loop={gif} style={styles.video}>
+        <VideoJS src={videoSrc} controls={!gif} autoPlay={gif} loop={gif} style={styles.video}>
           {'Your browser does not support the '}<code>{'video '}</code>{'element.'}
-        </video>
+        </VideoJS>
         {gif
           ? <div className="AdaptiveMedia-badge" style={styles.AdaptiveMediaBadge}>
               GIF

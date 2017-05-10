@@ -80,7 +80,7 @@ class Footer extends React.Component {
 }
 
 Footer.propTypes = {
-  data: React.PropTypes.object,
+  data: PropTypes.object,
 };
 
 Footer.displayName = 'Footer';

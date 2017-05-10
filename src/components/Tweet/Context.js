@@ -31,7 +31,7 @@ class Context extends React.Component {
 }
 
 Context.propTypes = {
-  data: React.PropTypes.object,
+  data: PropTypes.object,
 };
 
 Context.displayName = 'Context';

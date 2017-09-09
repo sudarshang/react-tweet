@@ -4,7 +4,7 @@ import styles from './styles';
 
 class Context extends React.Component {
   render() {
-    const { data } = this.props;
+    const { data, linkProps } = this.props;
 
     return (
       <div className="context" style={styles.context}>
@@ -19,6 +19,7 @@ class Context extends React.Component {
               className="pretty-link"
               href={`http://twitter.com/${data.user.screen_name}`}
               style={styles.link}
+              {...linkProps}
             >
               <b style={styles.b}>{data.user.name}</b>
             </a>

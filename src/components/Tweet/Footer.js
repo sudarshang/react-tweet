@@ -14,7 +14,7 @@ class Footer extends React.Component {
   }
 
   render() {
-    const { data } = this.props;
+    const { data, linkProps } = this.props;
 
     return (
       <div className="footer" style={styles.footer}>
@@ -22,6 +22,7 @@ class Footer extends React.Component {
           className="ProfileTweet-actionList"
           style={styles.ProfileTweetActionList}
           href={`http://twitter.com/${data.user.screen_name}/status/${data.id_str}`}
+          {...linkProps}
         >
           <div className="ProfileTweet-action" style={styles.ProfileTweetAction}>
             <button className="ProfileTweet-actionButton" style={styles.ProfileTweetActionBtn}>

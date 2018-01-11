@@ -45,6 +45,23 @@ class Tweet extends React.Component {
     let { data, linkProps } = this.props, isRT = false;
     let MediaComponent = null, QuoteComponent = null;
 
+    //Support for extended tweets
+    if (data.full_text) {
+      data.text = data.full_text;
+
+      if (data.quoted_status) {
+        data.quoted_status.text = data.quoted_status.full_text;
+      }
+
+      if (data.retweeted_status) {
+        data.retweeted_status.text = data.retweeted_status.full_text;
+
+        if (data.retweeted_status.quoted_status) {
+          data.retweeted_status.quoted_status.text = data.retweeted_status.quoted_status.full_text;
+        }
+      }
+    }
+
     // use retweet as data if its a RT
     if (data.retweeted_status) {
       data = data.retweeted_status;

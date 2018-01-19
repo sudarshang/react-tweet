@@ -199,6 +199,10 @@ export default {
   },
   video: {
     width: '100%',
+    verticalAlign: 'bottom',
+    maxHeight: '506px',
+    objectFit: 'contain',
+    background: '#000000',
   },
   Modal: {
     position: 'fixed',

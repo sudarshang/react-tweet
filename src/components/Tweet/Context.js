@@ -26,7 +26,7 @@ class Context extends React.Component {
             <a
               className="pretty-link"
               href={`https://twitter.com/${data.user.screen_name}`}
-              style={styles.link}
+              style={{ textDecoration: 'none', color: '#657786' }}
               {...linkProps}
             >
               {data.user.name}
